@@ -17,10 +17,20 @@ from .exceptions import StorageError
 from .models import Student
 
 
+def _find_project_root() -> Path:
+    """Find the root directory of the project regardless of whether executed from root or src/."""
+    current = Path(__file__).resolve().parent
+    for parent in [current] + list(current.parents):
+        if (parent / "pyproject.toml").exists() or (parent / "requirements.txt").exists() or (parent / "data").exists():
+            return parent
+    return current.parent.parent
+
+
 class StorageManager:
     """Handles persistent storage of student records on disk."""
 
-    DEFAULT_DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+    PROJECT_ROOT = _find_project_root()
+    DEFAULT_DATA_DIR = PROJECT_ROOT / "data"
     DEFAULT_JSON_PATH = DEFAULT_DATA_DIR / "students.json"
 
     def __init__(self, file_path: str | Path | None = None) -> None:

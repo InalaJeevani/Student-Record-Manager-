@@ -1,5 +1,25 @@
 [
     {
+        "student_id": "5C4",
+        "name": "Jeevani",
+        "email": "jeevani@gmail.com",
+        "course": "cse",
+        "marks": 100.0,
+        "grade": "A+",
+        "created_at": "2026-09-27 17:16:11",
+        "updated_at": "2026-09-27 17:16:11"
+    },
+    {
+        "student_id": "5J6",
+        "name": "Naveen",
+        "email": "naveen@gmail.com",
+        "course": "cse",
+        "marks": 100.0,
+        "grade": "A+",
+        "created_at": "2026-09-27 17:22:01",
+        "updated_at": "2026-09-27 17:22:01"
+    },
+    {
         "student_id": "STU101",
         "name": "Alice Johnson",
         "email": "alice.johnson@university.edu",

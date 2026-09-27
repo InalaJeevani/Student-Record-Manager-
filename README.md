@@ -42,13 +42,18 @@ A modular, production-ready **Student Record Management System** built with Pyth
 ```
 Student Record Manager/
 │
-├── student_manager/
-│   ├── __init__.py           # Package exports
-│   ├── exceptions.py         # Custom exception hierarchy
-│   ├── validator.py          # Regex email & input validation logic
-│   ├── models.py             # Student dataclass model & serialization
-│   ├── storage.py            # JSON/CSV file storage & atomic persistence
-│   └── manager.py            # Business logic, CRUD operations, & analytics
+├── src/
+│   ├── __init__.py           # Package root re-exports
+│   ├── main.py               # src entrypoint runner
+│   └── student_manager/
+│       ├── __init__.py       # Package exports
+│       ├── exceptions.py     # Custom exception hierarchy
+│       ├── validator.py      # Regex email & input validation logic
+│       ├── models.py         # Student dataclass model & serialization
+│       ├── storage.py        # JSON/CSV file storage & atomic persistence
+│       └── manager.py        # Business logic, CRUD operations, & analytics
+│
+├── student_manager/          # Root package mirror for flexible imports
 │
 ├── tests/
 │   ├── __init__.py           # Test suite initializer
@@ -61,11 +66,16 @@ Student Record Manager/
 │   ├── students.json         # Persistent JSON record database
 │   └── students_export.csv   # Optional CSV spreadsheet export
 │
+├── .devcontainer/
+│   └── devcontainer.json     # GitHub Codespaces browser environment
+│
 ├── .github/
 │   └── workflows/
-│       └── python-tests.yml  # GitHub Actions CI workflow
+│       ├── python-tests.yml  # GitHub Actions CI workflow
+│       └── run-demo.yml      # Run project in GitHub cloud workflow
 │
 ├── main.py                   # Interactive Command-Line Interface (CLI)
+├── pyproject.toml            # Modern Python packaging configuration
 ├── deploy_to_github.ps1      # 1-click GitHub deployment automation script
 ├── requirements.txt          # Project dependencies (zero-dependency core)
 ├── .gitignore                # Git ignore rules for Python
