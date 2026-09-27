@@ -1,0 +1,6 @@
+# Student Record Manager
+# This project uses Python standard library exclusively for zero-dependency portability.
+# Optional development dependencies:
+pytest>=8.0.0
+flake8>=7.0.0
+mypy>=1.9.0

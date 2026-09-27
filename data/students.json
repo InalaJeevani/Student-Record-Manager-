@@ -1,0 +1,52 @@
+[
+    {
+        "student_id": "STU101",
+        "name": "Alice Johnson",
+        "email": "alice.johnson@university.edu",
+        "course": "Computer Science",
+        "marks": 94.5,
+        "grade": "A+",
+        "created_at": "2026-09-27 16:54:33",
+        "updated_at": "2026-09-27 16:54:33"
+    },
+    {
+        "student_id": "STU102",
+        "name": "Bob Smith",
+        "email": "bob.smith@techcollege.org",
+        "course": "Data Science",
+        "marks": 82.0,
+        "grade": "A",
+        "created_at": "2026-09-27 16:54:33",
+        "updated_at": "2026-09-27 16:54:33"
+    },
+    {
+        "student_id": "STU103",
+        "name": "Charlie Brown",
+        "email": "charlie.b@campus.edu",
+        "course": "Software Engineering",
+        "marks": 68.5,
+        "grade": "C",
+        "created_at": "2026-09-27 16:54:33",
+        "updated_at": "2026-09-27 16:54:33"
+    },
+    {
+        "student_id": "STU104",
+        "name": "Diana Prince",
+        "email": "diana.prince@academy.org",
+        "course": "Cybersecurity",
+        "marks": 91.0,
+        "grade": "A+",
+        "created_at": "2026-09-27 16:54:33",
+        "updated_at": "2026-09-27 16:54:33"
+    },
+    {
+        "student_id": "STU105",
+        "name": "Evan Wright",
+        "email": "evan.wright@mail.com",
+        "course": "Artificial Intelligence",
+        "marks": 45.0,
+        "grade": "F",
+        "created_at": "2026-09-27 16:54:33",
+        "updated_at": "2026-09-27 16:54:33"
+    }
+]
