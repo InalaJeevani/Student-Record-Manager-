@@ -1,0 +1,36 @@
+name: Run Student Record Manager in GitHub
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  run-project:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+
+    - name: Run Test Suite
+      run: |
+        python -m unittest discover -s tests -v
+
+    - name: Run Student Record Manager Demo in GitHub
+      run: |
+        # Feed sample sequence: Load demo data [8], View All [2], View Stats [6], Export CSV [7], Exit [0]
+        printf "8\n2\n6\n7\n\n0\n" | python main.py
+
+    - name: Upload Persistent Data & CSV Export as Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: student-records-data
+        path: |
+          data/students.json
+          data/students_export.csv
